@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic.list import ListView
 
-def taskList(request):
-    return HttpResponse('Pacer')
+from .models import Tarea
+
+class TaskList(ListView):
+    model = Tarea
