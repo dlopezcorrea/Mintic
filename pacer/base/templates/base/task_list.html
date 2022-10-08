@@ -1,5 +1,5 @@
 <h1>Bienvenido a Pacer</h1>
-
+<a href="{% url 'task-create' %}">Agregar Tarea</a>
 <table>
     <tr>
         <th>Item</th>
@@ -9,6 +9,8 @@
     <tr>
         <td>{{task.titulo}}</td>
         <td><a href="{% url 'task' task.id %}">Ver</a></td>
+        <td><a href="{% url 'task-update' task.id %}">Editar</a></td>
+        <td><a href="{% url 'task-delete' task.id %}">Eliminar</a></td>
     </tr>
     {% empty %}
         <h3>No hay items en la lista</h3>    
