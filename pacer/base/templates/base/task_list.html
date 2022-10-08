@@ -1,3 +1,12 @@
+{% if request.user.is_authenticated %}
+<p>{{request.user}}</p> 
+<a href="">Cerrar Sesion</a>
+{% else %}
+<a href="">Iniciar Sesion</a>
+{% endif %} 
+
+<hr>
+
 <h1>Bienvenido a Pacer</h1>
 <a href="{% url 'task-create' %}">Agregar Tarea</a>
 <table>
