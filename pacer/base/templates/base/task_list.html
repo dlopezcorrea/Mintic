@@ -1,0 +1,14 @@
+<h1>Bienvenido a Pacer</h1>
+
+<table>
+    <tr>
+        <th>Item</th>
+    </tr>
+    {% for task in object_list %}
+    <tr>
+        <td>{{task.titulo}}</td>
+    </tr>
+    {% empty %}
+        <h3>No hay items en la lista</h3>    
+    {% endfor %}
+</table>
