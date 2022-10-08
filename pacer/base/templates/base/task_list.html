@@ -1,8 +1,8 @@
 {% if request.user.is_authenticated %}
 <p>{{request.user}}</p> 
-<a href="">Cerrar Sesion</a>
+<a href="{% url 'logout' %}">Cerrar Sesion</a>
 {% else %}
-<a href="">Iniciar Sesion</a>
+<a href="{% url 'login' %}">Iniciar Sesion</a>
 {% endif %} 
 
 <hr>
